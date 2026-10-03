@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактная информация интернет-магазина TechStore: адреса шоурумов, телефон службы поддержки, график работы и форма обратной связи.">
+  <title>Контакты и пункты самовывоза — TekStore</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__logo" aria-label="TechStore Главная">
+        <span class="site-header__logo-icon">Zzzz</span>
+        <span class="site-header__logo-text">TekStore</span>
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог</a></li>
+          <li class="site-nav__item"><a href="product.html" class="site-nav__link">Товар дня</a></li>
+          <li class="site-nav__item"><a href="order.html" class="site-nav__link">Оформить заказ</a></li>
+          <li class="site-nav__item"><a href="contacts.html" class="site-nav__link site-nav__link--active">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a href="order.html" class="button button--primary site-header__btn">Заказать товар</a>
+      </div>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="page-intro section-container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+        </ol>
+      </nav>
+      <h1 class="page-intro__title">Контакты и точки обслуживания</h1>
+      <p class="page-intro__subtitle">Приглашаем протестировать гаджеты в наших просторных фирменных шоурумах.</p>
+    </section>
+    <section class="contacts-section section-container">
+      <div class="contacts-grid">
+        <div class="contacts-info">
+          <article class="contact-card">
+            <div class="contact-card__icon">📍</div>
+            <div class="contact-card__content">
+              <h2 class="contact-card__title">Флагманский шоурум и СЦ</h2>
+              <address class="contact-card__address">
+                <p>666666, г. Москва, ул. Мирная, дом 52, корпус 666</p>
+                <p><strong>График работы:</strong> Ежедневно с 10:00 до 22:00 без выходных</p>
+                <p><strong>Парковка:</strong> Бесплатная для клиентов магазина</p>
+              </address>
+            </div>
+          </article>
+          <article class="contact-card">
+            <div class="contact-card__icon">📞</div>
+            <div class="contact-card__content">
+              <h2 class="contact-card__title">Телефоны для связи</h2>
+              <ul class="contact-card__list">
+                <li>Бесплатно по РФ: <a href="tel:+78005553535" class="contact-card__link">+7 (999) 999-99-99</a></li>
+                <li>Отдел оптовых закупок: <a href="tel:+74951234567" class="contact-card__link">+7 (999) 999-99-67</a></li>
+                <li>Техническая поддержка: <a href="tel:+74959876543" class="contact-card__link">+7 (999) 999-99-42</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="contact-card">
+            <div class="contact-card__icon">✉️</div>
+            <div class="contact-card__content">
+              <h2 class="contact-card__title">Электронная почта</h2>
+              <ul class="contact-card__list">
+                <li>Общие вопросы: <a href="mailto:info@techstore.ru" class="contact-card__link">info@tekstore.ru</a></li>
+                <li>Заказы и доставка: <a href="mailto:order@techstore.ru" class="contact-card__link">order@tekstore.ru</a></li>
+                <li>Сотрудничество: <a href="mailto:partners@techstore.ru" class="contact-card__link">partners@tekstore.ru</a></li>
+              </ul>
+            </div>
+          </article>
+          <div class="map-placeholder">
+            <div class="map-placeholder__inner">
+              <span class="map-placeholder__pin">📍</span>
+              <h3 class="map-placeholder__title">Схема проезда к TechStore</h3>
+              <p class="map-placeholder__text">2 минуты пешком от улицы Мирной. Вход со стороны конюшни.</p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="button button--secondary button--small">Открыть на картах ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-feedback">
+          <div class="feedback-card">
+            <h2 class="feedback-card__title">Напишите нам сообщение</h2>
+            <p class="feedback-card__desc">Есть вопрос по наличию, гарантии или хотите оставить отзыв? Заполните форму ниже.</p>
+            <form id="feedbackForm" class="feedback-form" method="POST" action="#">
+              <div class="form-group">
+                <label for="fbName" class="form-label">Ваше имя <span class="required-star">*</span></label>
+                <input type="text" id="fbName" name="name" class="form-input" placeholder="Сергей" required>
+              </div>
+              <div class="form-group">
+                <label for="fbEmail" class="form-label">Электронный адрес <span class="required-star">*</span></label>
+                <input type="email" id="fbEmail" name="email" class="form-input" placeholder="sergay@mail.ru" required>
+              </div>
+              <div class="form-group">
+                <label for="fbTopic" class="form-label">Тема обращения <span class="required-star">*</span></label>
+                <select id="fbTopic" name="topic" class="form-select" required>
+                  <option value="question">Вопрос по характеристикам товара</option>
+                  <option value="warranty">Гарантийное обслуживание</option>
+                  <option value="delivery">Сроки и статус доставки</option>
+                  <option value="partnership">Предложение о сотрудничестве</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="fbMessage" class="form-label">Текст сообщения <span class="required-star">*</span></label>
+                <textarea id="fbMessage" name="message" class="form-textarea" rows="5" placeholder="Напишите подробнее ваш вопрос..." required></textarea>
+              </div>
+              <div class="form-group form-group--checkbox">
+                <label for="fbAgreement" class="form-checkbox-label">
+                  <input type="checkbox" id="fbAgreement" name="agreement" required checked>
+                  <span>Я согласен на обработку персональных данных <span class="required-star">*</span></span>
+                </label>
+              </div>
+              <button type="submit" class="button button--primary button--large button--block">Отправить обращение</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__col">
+        <a href="index.html" class="site-footer__logo"><span>Zzzz</span> TekStore</a>
+        <p class="site-footer__about">Многостраничный сайт интернет-магазина. КР №1 по веб-разработке.</p>
+        <p class="site-footer__copyright">&copy; 2026 TekStore. Права не защищены.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Навигация</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html" class="site-footer__link">Главная</a></li>
+          <li><a href="catalog.html" class="site-footer__link">Каталог</a></li>
+          <li><a href="product.html" class="site-footer__link">Товар дня</a></li>
+          <li><a href="order.html" class="site-footer__link">Оформить заказ</a></li>
+          <li><a href="contacts.html" class="site-footer__link">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Якоря главной</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html#advantages" class="site-footer__link">Преимущества</a></li>
+          <li><a href="index.html#popular" class="site-footer__link">Популярные товары</a></li>
+          <li><a href="index.html#contacts" class="site-footer__link">Связаться с нами</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Прямой телефон</h4>
+        <address class="site-footer__contacts">
+          <p>+7 (800) 555-35-35</p>
+          <p>support@tekstore.ru</p>
+          <p>Ежедневно: 10:00 - 22:00</p>
+        </address>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="button-to-top" id="btnToTop" aria-label="Наверх">↑</a>
+  <script src="js/main.js"></script>
+</body>
+</html>

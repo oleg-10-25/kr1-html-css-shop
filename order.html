@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заказа на покупку техники в TechStore: быстрая доставка, оплата при получении, гарантия.">
+  <title>Оформление заказа — TekStore</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__logo" aria-label="TechStore Главная">
+        <span class="site-header__logo-icon">Zzzz</span>
+        <span class="site-header__logo-text">TekStore</span>
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог</a></li>
+          <li class="site-nav__item"><a href="product.html" class="site-nav__link">Товар дня</a></li>
+          <li class="site-nav__item"><a href="order.html" class="site-nav__link site-nav__link--active">Оформить заказ</a></li>
+          <li class="site-nav__item"><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a href="catalog.html" class="button button--secondary site-header__btn">В каталог</a>
+      </div>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="page-intro section-container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item" aria-current="page">Оформление заявки</li>
+        </ol>
+      </nav>
+      <h1 class="page-intro__title">Оформление заказа на покупку</h1>
+      <p class="page-intro__subtitle">Заполните поля формы. Мы свяжемся для подтверждения деталей и способа получения.</p>
+    </section>
+    <section class="order-section section-container">
+      <div class="order-layout">
+        <div class="order-form-wrapper">
+          <form id="mainOrderForm" class="order-form" method="POST" action="#">
+            <fieldset class="order-form__fieldset">
+              <legend class="order-form__legend">1. Контактные данные получателя</legend>
+              <div class="order-form__field">
+                <label for="userName" class="order-form__label">Ваше полное имя <span class="required-star">*</span></label>
+                <input type="text" id="userName" name="client_name" class="order-form__input" placeholder="Иван Иванов" required autocomplete="name">
+                <span class="order-form__hint">Укажите имя для оформления транспортной накладной</span>
+              </div>
+              <div class="order-form__field">
+                <label for="userEmail" class="order-form__label">Электронная почта <span class="required-star">*</span></label>
+                <input type="email" id="userEmail" name="client_email" class="order-form__input" placeholder="ivanov@example.com" required autocomplete="email">
+                <span class="order-form__hint">На этот e-mail придет чек и трек-номер посылки</span>
+              </div>
+              <div class="order-form__field">
+                <label for="userPhone" class="order-form__label">Номер телефона <span class="required-star">*</span></label>
+                <input type="tel" id="userPhone" name="client_phone" class="order-form__input" placeholder="+7 (999) 123-45-67" required autocomplete="tel">
+              </div>
+            </fieldset>
+            <fieldset class="order-form__fieldset">
+              <legend class="order-form__legend">2. Выбор товара и параметры заказа</legend>
+              <div class="order-form__field">
+                <label for="productSelect" class="order-form__label">Выберите товар или тему заявки <span class="required-star">*</span></label>
+                <select id="productSelect" name="chosen_product" class="order-form__select" required>
+                  <option value="" disabled selected>-- Выберите устройство из списка --</option>
+                  <option value="laptop-pro">Ноутбук TechPro Infinity 16 Pro M3 (149 990 ₽)</option>
+                  <option value="phone-titanium">Смартфон Nova X Pro Titanium 512GB (89 990 ₽)</option>
+                  <option value="headphones-max">Наушники Pulse ANC Studio Max (32 490 ₽)</option>
+                  <option value="tablet-vision">Планшет Slate Vision 12 OLED (64 990 ₽)</option>
+                  <option value="watch-sapphire">Часы Chrono Gear 5 Sapphire (28 990 ₽)</option>
+                  <option value="custom-consultation">Индивидуальная консультация специалиста</option>
+                </select>
+              </div>
+              <div class="order-form__field">
+                <span class="order-form__label">Способ получения:</span>
+                <div class="order-form__radios">
+                  <label class="order-form__radio-label">
+                    <input type="radio" name="delivery_method" value="courier" checked>
+                    <span>Курьерская экспресс-доставка (0 ₽)</span>
+                  </label>
+                  <label class="order-form__radio-label">
+                    <input type="radio" name="delivery_method" value="pickup">
+                    <span>Самовывоз из флагманского магазина (г. Москва)</span>
+                  </label>
+                </div>
+              </div>
+              <div class="order-form__field">
+                <label for="userComment" class="order-form__label">Комментарий к заявке / адрес доставки</label>
+                <textarea id="userComment" name="client_comment" class="order-form__textarea" rows="4" placeholder="Укажите точный адрес доставки, удобное время звонка или пожелания к комплектации..."></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="order-form__fieldset">
+              <legend class="order-form__legend">3. Подтверждение</legend>
+              <div class="order-form__field order-form__field--checkbox">
+                <label for="dataAgreement" class="order-form__checkbox-label">
+                  <input type="checkbox" id="dataAgreement" name="agreement" required checked>
+                  <span>Я подтверждаю согласие на обработку персональных данных в соответствии с Федеральным законом № 666-ФЗ <span class="required-star">*</span></span>
+                </label>
+              </div>
+              <div class="order-form__field order-form__field--checkbox">
+                <label for="newsletter" class="order-form__checkbox-label">
+                  <input type="checkbox" id="newsletter" name="newsletter">
+                  <span>Получать уведомления о закрытых распродажах и персональных скидках</span>
+                </label>
+              </div>
+            </fieldset>
+            <div class="order-form__actions">
+              <button type="submit" class="button button--primary button--large">Отправить заказ в обработку</button>
+              <button type="reset" class="button button--secondary button--large">Очистить поля</button>
+            </div>
+          </form>
+        </div>
+        <aside class="order-summary-sidebar">
+          <div class="order-summary-card">
+            <h3 class="order-summary-card__title">Гарантии TechStore</h3>
+            <ul class="order-summary-card__list">
+              <li>
+                <span class="icon">🔒</span>
+                <div>
+                  <strong>Безопасность</strong>
+                  <p>Все персональные данные шифруются по протоколу SSL 256-bit.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon">📦</span>
+                <div>
+                  <strong>Проверка перед оплатой</strong>
+                  <p>Вы можете осмотреть и включить гаджет до передачи денег курьеру.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon">⚡</span>
+                <div>
+                  <strong>Быстрый звонок</strong>
+                  <p>Среднее время ответа оператора составляет 7 минут в рабочие часы.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="order-summary-card__support">
+              <p>Нужна помощь с заказом?</p>
+              <a href="tel:+78005553535" class="order-summary-card__phone">+7 (800) 555-35-35</a>
+              <span class="order-summary-card__workhours">Ежедневно: 09:00 — 21:00</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__col">
+        <a href="index.html" class="site-footer__logo"><span>Zzz</span> TekStore</a>
+        <p class="site-footer__about">Безопасный заказ оригинальной техники с официальной гарантией.</p>
+        <p class="site-footer__copyright">&copy; 2026 TekStore. Права не защищены.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Навигация</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html" class="site-footer__link">Главная</a></li>
+          <li><a href="catalog.html" class="site-footer__link">Каталог</a></li>
+          <li><a href="product.html" class="site-footer__link">Товар дня</a></li>
+          <li><a href="order.html" class="site-footer__link">Оформить заказ</a></li>
+          <li><a href="contacts.html" class="site-footer__link">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Якоря</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html#advantages" class="site-footer__link">Преимущества</a></li>
+          <li><a href="index.html#popular" class="site-footer__link">Популярное</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Служба заботы</h4>
+        <address class="site-footer__contacts">
+          <p>📞 +7 (999) 999-99-99</p>
+          <p>support@tekstore.ru</p>
+        </address>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="button-to-top" id="btnToTop" aria-label="Наверх">↑</a>
+  <script src="js/main.js"></script>
+</body>
+</html>

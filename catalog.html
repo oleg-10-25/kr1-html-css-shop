@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Полный каталог электроники магазина TechStore: ноутбуки, смартфоны, планшеты, аудио и аксессуары.">
+  <title>Каталог товаров — TekStore</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__logo" aria-label="TechStore Главная">
+        <span class="site-header__logo-icon">Zzz</span>
+        <span class="site-header__logo-text">TekStore</span>
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li class="site-nav__item"><a href="catalog.html" class="site-nav__link site-nav__link--active">Каталог</a></li>
+          <li class="site-nav__item"><a href="product.html" class="site-nav__link">Товар дня</a></li>
+          <li class="site-nav__item"><a href="order.html" class="site-nav__link">Оформить заказ</a></li>
+          <li class="site-nav__item"><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a href="order.html" class="button button--primary site-header__btn">Корзина (0)</a>
+      </div>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="page-intro section-container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item" aria-current="page">Каталог товаров</li>
+        </ol>
+      </nav>
+      <h1 class="page-intro__title">Каталог цифровой техники</h1>
+      <p class="page-intro__subtitle">Найдено 6 моделей с расширенной заводской гарантией</p>
+    </section>
+    <section class="catalog-layout section-container">
+      <aside class="filter-panel" aria-label="Фильтры товаров">
+        <div class="filter-panel__card">
+          <h2 class="filter-panel__heading">Фильтры каталога</h2>
+          <div class="filter-group">
+            <h3 class="filter-group__title">Категории</h3>
+            <ul class="filter-group__list">
+              <li>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="cat" value="laptops" checked>
+                  <span class="filter-checkbox__label">Ноутбуки (8)</span>
+                </label>
+              </li>
+              <li>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="cat" value="phones" checked>
+                  <span class="filter-checkbox__label">Смартфоны (12)</span>
+                </label>
+              </li>
+              <li>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="cat" value="audio" checked>
+                  <span class="filter-checkbox__label">Аудио и наушники (6)</span>
+                </label>
+              </li>
+              <li>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="watches">
+                  <span class="filter-checkbox__label">Умные часы (4)</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-group">
+            <h3 class="filter-group__title">Цена</h3>
+            <div class="filter-range-inputs">
+              <input type="number" placeholder="от 20 000" class="filter-input" aria-label="Цена от" value="25000">
+              <span class="filter-range-dash">—</span>
+              <input type="number" placeholder="до 250 000" class="filter-input" aria-label="Цена до" value="180000">
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3 class="filter-group__title">Спецпредложения</h3>
+            <ul class="filter-group__list">
+              <li>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="promo" value="hit" checked>
+                  <span class="filter-checkbox__label">Хит продаж</span>
+                </label>
+              </li>
+              <li>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="promo" value="discount" checked>
+                  <span class="filter-checkbox__label">Товары со скидкой %</span>
+                </label>
+              </li>
+              <li>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="promo" value="stock" checked>
+                  <span class="filter-checkbox__label">В наличии сегодня</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-panel__actions">
+            <button type="button" class="button button--primary button--block">Применить фильтр</button>
+            <button type="reset" class="button button--secondary button--block">Сбросить</button>
+          </div>
+        </div>
+      </aside>
+      <div class="catalog-content">
+        <div class="catalog-toolbar">
+          <span class="catalog-toolbar__count">Показано 6 из 30 товаров</span>
+          <div class="catalog-toolbar__sorting">
+            <label for="sortSelect" class="catalog-toolbar__label">Сортировка:</label>
+            <select id="sortSelect" class="catalog-toolbar__select">
+              <option value="popular">По популярности</option>
+              <option value="price-asc">Сначала недорогие</option>
+              <option value="price-desc">Сначала премиум</option>
+              <option value="rating">По рейтингу покупателей</option>
+            </select>
+          </div>
+        </div>
+        <div class="cards-grid cards-grid--catalog">
+          <article class="product-card product-card--hit">
+            <span class="product-card__badge product-card__badge--hit">Хит продаж</span>
+            <div class="product-card__image-box">
+              <img src="images/laptop.svg" alt="Ноутбук TechPro Infinity 16" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/38bdf8?text=TechPro+16'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Ноутбуки</span>
+              <h3 class="product-card__title">TechPro Infinity 16 Pro M3</h3>
+              <p class="product-card__description">32GB RAM / 1TB NVMe / Mini-LED 120Hz / Автономность до 18 ч.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">149 990 ₽</span>
+                  <span class="product-card__old-price">169 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--sale">
+            <span class="product-card__badge product-card__badge--sale">-20% Скидка</span>
+            <div class="product-card__image-box">
+              <img src="images/phone.svg" alt="Смартфон Nova X Pro" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/f43f5e?text=Nova+X+Pro'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Смартфоны</span>
+              <h3 class="product-card__title">Nova X Pro Titanium 512GB</h3>
+              <p class="product-card__description">Камера 200 Мп / AMOLED 144Hz / Титановый корпус / Зарядка 120W.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">89 990 ₽</span>
+                  <span class="product-card__old-price">109 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--new">
+            <span class="product-card__badge product-card__badge--new">Новинка</span>
+            <div class="product-card__image-box">
+              <img src="images/headphones.svg" alt="Pulse ANC Studio Max" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/10b981?text=Pulse+ANC+Max'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Аудио</span>
+              <h3 class="product-card__title">Pulse ANC Studio Max Wireless</h3>
+              <p class="product-card__description">Hi-Res Lossless Audio / 4 микрофона ANC / Защита IPX4 / 40 ч работы.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">32 490 ₽</span>
+                  <span class="product-card__old-price">36 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-card__image-box">
+              <img src="images/tablet.svg" alt="Планшет Slate Vision 12" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/a855f7?text=Slate+Vision+12'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Планшеты</span>
+              <h3 class="product-card__title">Slate Vision 12 Ultra OLED</h3>
+              <p class="product-card__description">Экран 3K 120Hz / Стилус в комплекте / Snapdragon 8 Gen 3 / 256GB.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">64 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--hit">
+            <span class="product-card__badge product-card__badge--hit">Хит</span>
+            <div class="product-card__image-box">
+              <img src="images/watch.svg" alt="Часы Chrono Gear 5" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/06b6d4?text=Chrono+Gear+5'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Умные часы</span>
+              <h3 class="product-card__title">Chrono Gear 5 Sapphire Pro</h3>
+              <p class="product-card__description">ЭКГ, пульсоксиметр, сапфировое стекло, титан, автономность 14 дней.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">28 990 ₽</span>
+                  <span class="product-card__old-price">31 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--disabled">
+            <span class="product-card__badge product-card__badge--disabled">Ожидается</span>
+            <div class="product-card__image-box">
+              <img src="images/laptop.svg" alt="Ноутбук TechPro Mini 14" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/64748b?text=TechPro+Mini+14'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Ноутбуки</span>
+              <h3 class="product-card__title">TechPro Mini 14 Air Carbon</h3>
+              <p class="product-card__description">Ультралегкий ультрабук 990 грамм / 16GB RAM / Core Ultra 7.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">112 000 ₽</span>
+                </div>
+                <button class="button button--disabled product-card__button" disabled>Нет в наличии</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <nav class="pagination" aria-label="Страницы каталога">
+          <ul class="pagination__list">
+            <li><span class="pagination__link pagination__link--active" aria-current="page">1</span></li>
+            <li><a href="#" class="pagination__link">2</a></li>
+            <li><a href="#" class="pagination__link">3</a></li>
+            <li><a href="#" class="pagination__link">Вперед →</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__col">
+        <a href="index.html" class="site-footer__logo"><span>Zzzz</span> TekStore</a>
+        <p class="site-footer__about">Каталог сертифицированной техники с гарантией до 2 лет.</p>
+        <p class="site-footer__copyright">&copy; 2026 TekStore. Права не защищены.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Навигация</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html" class="site-footer__link">Главная</a></li>
+          <li><a href="catalog.html" class="site-footer__link">Каталог</a></li>
+          <li><a href="product.html" class="site-footer__link">Товар дня</a></li>
+          <li><a href="order.html" class="site-footer__link">Оформить заказ</a></li>
+          <li><a href="contacts.html" class="site-footer__link">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Быстрый переход</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html#advantages" class="site-footer__link">Преимущества</a></li>
+          <li><a href="index.html#popular" class="site-footer__link">Хиты продаж</a></li>
+          <li><a href="contacts.html" class="site-footer__link">Пункты выдачи</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Контакты</h4>
+        <address class="site-footer__contacts">
+          <p>📞 <a href="tel:+78005553535" class="site-footer__link">+7 (999) 999-99-99</a></p>
+          <p>✉️ <a href="mailto:order@techstore.ru" class="site-footer__link">order@tekstore.ru</a></p>
+        </address>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="button-to-top" id="btnToTop" aria-label="Наверх">↑</a>
+  <script src="js/main.js"></script>
+</body>
+</html>
