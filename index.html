@@ -3,169 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог товаров</title>
+  <meta name="description" content="Интернет-магазин современной электроники и техники TechStore. Ноутбуки, смартфоны, аксессуары по лучшим ценам.">
+  <title>TekStore — Интернет-магазин техники и электроники</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
 </head>
-<body>
-    <header>
-      <div class="site-header">
-        <a class="site-logo" href="index.html">ShopProject</a>
-
-        <nav class="site-nav" aria-label="Основная навигация">
-          <ul class="site-nav__list">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#popular">Популярные товары</a></li>
-            <li><a href="#advantages">Преимущества</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
+<body class="site-body">
+  <header class="site-header">
+    <div class="site-header__container">
+      <a href="index.html" class="site-header__logo" aria-label="TechStore Главная">
+        <span class="site-header__logo-icon">Zzzz</span>
+        <span class="site-header__logo-text">TekStore</span>
+      </a>
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link site-nav__link--active">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="catalog.html" class="site-nav__link">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="product.html" class="site-nav__link">Товар дня</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="order.html" class="site-nav__link">Оформить заказ</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a href="index.html#popular" class="button button--secondary site-header__btn">Хиты продаж</a>
+        <a href="order.html" class="button button--primary site-header__btn">Корзина (0)</a>
       </div>
-    </header>
-    <main>
-        <section class="hero">
-          <h1>Учебный интернет-магазин</h1>
-          <p>
-            Это стартовая страница учебного frontend-проекта.
-            В дальнейшем на её основе будет разработан многостраничный сайт
-            интернет-магазина или каталога услуг.
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="hero-banner">
+      <div class="hero-banner__inner">
+        <div class="hero-banner__content">
+          <span class="badge badge--primary hero-banner__badge">Флагманский сезон 2026</span>
+          <h1 class="hero-banner__title">Технологии будущего для вашей продуктивности</h1>
+          <p class="hero-banner__description">
+            Официальные поставки флагманских ультрабуков, смартфонов и носимой электроники с расширенной 2-летней гарантией и моментальной доставкой.
           </p>
-          <a class="button" href="#popular">Перейти к товарам</a>
-        </section>
-        <section class="section" id="advantages">
-          <h2>Преимущества проекта</h2>
-          <ul class="advantages-list">
-            <li>понятная HTML-структура;</li>
-            <li>семантические блоки страницы;</li>
-            <li>подключение внешнего CSS-файла;</li>
-            <li>подготовка к разработке многостраничного сайта.</li>
-          </ul>
-        </section>
-        <section class="section" id="popular">
-          <h2>Популярные товары</h2>
-          <article class="product-card">
-            <h3>Товар 1</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 1000 руб.</p>
-            <button class="button product-card__button" type="button" data-product="Товар 1">
-              Заказать
-            </button>
+          <div class="hero-banner__buttons">
+            <a href="catalog.html" class="button button--primary button--large">Перейти в каталог</a>
+            <a href="#advantages" class="button button--outline button--large">Наши преимущества</a>
+          </div>
+        </div>
+        <div class="hero-banner__media">
+          <div class="hero-banner__card-preview">
+            <img src="images/hero-laptop.svg" alt="Ультрабук TechPro 16 Pro" class="hero-banner__image" onerror="this.src='https://placehold.co/600x400/0f172a/38bdf8?text=TechStore+Ultrabook'">
+            <div class="hero-banner__floating-tag">Скидка -15% по предзаказу</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="advantages" class="features section-block">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-header__subtitle">Почему выбирают нас</span>
+          <h2 class="section-header__title">Преимущества интернет-магазина TechStore</h2>
+        </header>
+        <div class="features__grid">
+          <article class="feature-item">
+            <div class="feature-item__icon-wrapper">
+              <span class="feature-item__icon">🛡️</span>
+            </div>
+            <h3 class="feature-item__title">Гарантия 24 месяца</h3>
+            <p class="feature-item__text">Собственный авторизованный сервисный центр и оперативная замена устройства при неисправности.</p>
           </article>
-          <article class="product-card">
-            <h3>Товар 2</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 1500 руб.</p>
-            <button class="button product-card__button" type="button" data-product="Товар 1">
-              Заказать
-            </button>
+          <article class="feature-item">
+            <div class="feature-item__icon-wrapper">
+              <span class="feature-item__icon">🚀</span>
+            </div>
+            <h3 class="feature-item__title">Экспресс-доставка</h3>
+            <p class="feature-item__text">Бесплатная курьерская доставка по городу в течение 2 часов при заказе от 5 000 ₽.</p>
           </article>
-          <article class="product-card">
-            <h3>Товар 3</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 2000 руб.</p>
-            <button class="button product-card__button" type="button" data-product="Товар 1">
-              Заказать
-            </button>
+          <article class="feature-item">
+            <div class="feature-item__icon-wrapper">
+              <span class="feature-item__icon">💎</span>
+            </div>
+            <h3 class="feature-item__title">Только оригинал</h3>
+            <p class="feature-item__text">100% сертифицированные устройства с серийными номерами и заводской гарантией качества.</p>
           </article>
-        </section>
-        <aside class="aside-info">
-          <h2>Информация для студентов</h2>
-          <p>
-            На следующих практических занятиях этот проект будет расширяться:
-            появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-            БЭМ-структура и адаптивная версия сайта.
-          </p>
-        </aside>
-    </main>
-    <footer id="contacts">
-      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
-    </footer>
-    <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-      <h2 id="order-dialog-title">Оформление заявки</h2>
-      <form class="order-form" id="order-form" action="#" method="post" novalidate>
-        <input id="selected-product" name="selected-product" type="hidden">
-        <div class="form-field">
-          <label for="order-name">Имя</label>
-          <input
-            id="order-name"
-            name="name"
-            type="text"
-            placeholder="Введите ваше имя"
-            minlength="2"
-            autocomplete="given-name"
-            required
-          >
+          <article class="feature-item">
+            <div class="feature-item__icon-wrapper">
+              <span class="feature-item__icon">💳</span>
+            </div>
+            <h3 class="feature-item__title">Удобная оплата</h3>
+            <p class="feature-item__text">Оплата онлайн картой, СБП, в рассрочку 0-0-12 или при получении курьеру.</p>
+          </article>
         </div>
-        <div class="form-field">
-          <label for="order-email">E-mail</label>
-          <input
-            id="order-email"
-            name="email"
-            type="email"
-            placeholder="example@mail.ru"
-            autocomplete="email"
-            required
-          >
+      </div>
+    </section>
+    <section id="popular" class="popular-products section-block section-block--alt">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-header__subtitle">Бестселлеры</span>
+          <h2 class="section-header__title">Популярные товары TechStore</h2>
+          <p class="section-header__desc">Выбор наших клиентов на основе оценок и надежности.</p>
+        </header>
+        <div class="cards-grid">
+          <article class="product-card product-card--hit">
+            <span class="product-card__badge product-card__badge--hit">Хит продаж</span>
+            <div class="product-card__image-box">
+              <img src="images/laptop.svg" alt="Ноутбук TechPro Infinity 16" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/38bdf8?text=TechPro+Laptop'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Ноутбуки</span>
+              <h3 class="product-card__title">TechPro Infinity 16 M3 Ultra</h3>
+              <p class="product-card__description">32 GB RAM, 1 TB SSD, Retina 120Hz display, до 18 часов автономной работы.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">149 990 ₽</span>
+                  <span class="product-card__old-price">169 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--sale">
+            <span class="product-card__badge product-card__badge--sale">Скидка -20%</span>
+            <div class="product-card__image-box">
+              <img src="images/phone.svg" alt="Смартфон Nova X Pro" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/f43f5e?text=Nova+X+Pro'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Смартфоны</span>
+              <h3 class="product-card__title">Nova X Pro Titanium 512GB</h3>
+              <p class="product-card__description">Камера 200 Мп со стабилизацией, AMOLED 144Hz, титановый корпус.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">89 990 ₽</span>
+                  <span class="product-card__old-price">109 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--new">
+            <span class="product-card__badge product-card__badge--new">Новинка</span>
+            <div class="product-card__image-box">
+              <img src="images/headphones.svg" alt="Наушники Pulse ANC Max" class="product-card__img" onerror="this.src='https://placehold.co/400x300/1e293b/10b981?text=Pulse+ANC+Max'">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Аудио</span>
+              <h3 class="product-card__title">Pulse ANC Studio Max Wireless</h3>
+              <p class="product-card__description">Активное шумоподавление нового поколения, пространственный звук Spatial Audio.</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="product-card__price">32 490 ₽</span>
+                  <span class="product-card__old-price">36 990 ₽</span>
+                </div>
+                <a href="product.html" class="button button--primary product-card__button">Подробнее</a>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="form-field">
-          <label for="order-phone">Телефон</label>
-          <input
-            id="order-phone"
-            name="phone"
-            type="tel"
-            inputmode="tel"
-            placeholder="+7 (900) 000-00-00"
-            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-            required
-          >
-          <small>Формат: +7 (900) 000-00-00</small>
+        <div class="section-actions">
+          <a href="catalog.html" class="button button--outline button--large">Смотреть все 12 товаров в каталоге →</a>
         </div>
-        <div class="form-field">
-          <label for="order-date">Дата связи</label>
-          <input
-            id="order-date"
-            name="date"
-            type="date"
-          >
+      </div>
+    </section>
+    <section id="contacts" class="about-section section-block">
+      <div class="section-container">
+        <div class="banner-cta">
+          <div class="banner-cta__content">
+            <h2 class="banner-cta__title">Нужна персональная консультация?</h2>
+            <p class="banner-cta__text">Наши инженеры помогут подобрать устройство под ваши задачи: от программирования и дизайна до киберспорта.</p>
+            <div class="banner-cta__buttons">
+              <a href="order.html" class="button button--primary">Оставить заявку</a>
+              <a href="contacts.html" class="button button--secondary">Контакты и адреса магазинов</a>
+            </div>
+          </div>
+          <div class="banner-cta__info-badge">
+            <span class="banner-cta__number">7+</span>
+            <span class="banner-cta__label">лет безупречной работы</span>
+          </div>
         </div>
-        <div class="form-field">
-          <label for="order-topic">Тема заявки</label>
-          <select id="order-topic" name="topic" required>
-            <option value="">Выберите тему</option>
-            <option value="product">Заказ товара</option>
-            <option value="consultation">Консультация</option>
-            <option value="delivery">Доставка</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="order-comment">Комментарий</label>
-          <textarea
-            id="order-comment"
-            name="comment"
-            rows="4"
-            placeholder="Укажите дополнительную информацию"
-          ></textarea>
-        </div>
-        <div class="form-field form-field--checkbox">
-          <label>
-            <input
-              id="order-agreement"
-              name="agreement"
-              type="checkbox"
-              required
-            >
-            Я согласен на обработку данных
-          </label>
-        </div>
-        <div class="form-actions">
-          <button type="button" id="close-order-dialog">Закрыть</button>
-          <button type="submit">Отправить заявку</button>
-        </div>
-      </form>
-    </dialog>
-    <p class="success-message" id="success-message" hidden>
-      Форма успешно отправлена!
-    </p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__container">
+      <div class="site-footer__col">
+        <a href="index.html" class="site-footer__logo">
+          <span>Zzzz</span> TekStore
+        </a>
+        <p class="site-footer__about">Многостраничный учебный проект интернет-магазина техники по методическим указаниям КР №1.</p>
+        <p class="site-footer__copyright">&copy; 2026 TekStore. Права не защищены.</p>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Навигация</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html" class="site-footer__link">Главная страница</a></li>
+          <li><a href="catalog.html" class="site-footer__link">Каталог товаров</a></li>
+          <li><a href="product.html" class="site-footer__link">Товар дня (TechPro 16)</a></li>
+          <li><a href="order.html" class="site-footer__link">Оформление заявки</a></li>
+          <li><a href="contacts.html" class="site-footer__link">Контакты и самовывоз</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Якорные ссылки</h4>
+        <ul class="site-footer__links">
+          <li><a href="index.html#advantages" class="site-footer__link">Преимущества магазина</a></li>
+          <li><a href="index.html#popular" class="site-footer__link">Популярные товары</a></li>
+          <li><a href="index.html#contacts" class="site-footer__link">Связаться с нами</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__title">Контакты</h4>
+        <address class="site-footer__contacts">
+          <p>📞 <a href="tel:+78005553535" class="site-footer__link">+7 (999) 999-99-99</a></p>
+          <p>✉️ <a href="mailto:support@techstore.ru" class="site-footer__link">support@tekstore.ru</a></p>
+          <p>666666, г. Москва, ул. Мирная, дом 52, корпус 666</p>
+        </address>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="button-to-top" id="btnToTop" aria-label="Вернуться наверх страницы">↑</a>
+  <script src="js/main.js"></script>
 </body>
 </html>
